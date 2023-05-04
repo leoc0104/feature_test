@@ -11,8 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('model_images', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->string('extension');
+            $table->integer('original_size ');
+            $table->decimal('original_width', 4, 2);
+            $table->decimal('original_height', 4, 2);
+            $table->enum('action', ['resize', 'crop']);
+            $table->unsignedBigInteger('size');
+            $table->unsignedInteger('width');
+            $table->unsignedInteger('height');
+            $table->string('path');
+            $table->string('original_image_path');
             $table->timestamps();
         });
     }
@@ -22,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('model_images');
+        Schema::dropIfExists('images');
     }
 };
