@@ -6,7 +6,7 @@
   <hr />
 
   <div class="text-center mt-4 mb-4">
-    <a href="{{url('students/create')}}">
+    <a href="{{url('images/action')}}">
       <button class="btn btn-success">CADASTRAR</button>
     </a>
   </div>
@@ -14,33 +14,28 @@
   <div class="col-8 m-auto">
     @csrf
 
-    <table border="1" class="table text-center">
-      <tr>
-          <th>ID</th>
-          <th>Usuário</th>
-          <th>Nome</th>
-          <th>Ação</th>
-          <th>Caminho</th>
-          <th>Caminho original</th>
-          <th>Data/hora de criação</th>
-      </tr>
-      <tr>
-          <td>1</td>
-          <td>Chris</td>
-          <td>Wallpaper.png</td>
-          <td>Resize</td>
+    <table class="table text-center">
+      <thead class = "thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Usuário</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Ação</th>
+          <th scope="col">Caminho</th>
+          <th scope="col">Caminho original</th>
+          <th scope="col">Data e hora de cadastro</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
           <td><a href="#">http://localhost:8000/images/processed/chris/{uuid}_wallpaper.png</a></td>
           <td><a href="#">http://localhost:8000/images/original/chris/{uuid}_wallpaper.png</a></td>
-          <td>04/05/2023 10:54:30</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td>Leo</td>
-          <td>Demon_Slayer_Inosuke.jpg</td>
-          <td>Crop</td>
-          <td><a href="#">http://localhost:8000/images/processed/leo/{uuid}_demon_slayer_inosuke.jpg</a></td>
-          <td><a href="#">http://localhost:8000/images/original/leo/{uuid}_demon_slayer_inosuke.jpg</a></td>
-          <td>04/05/2023 10:56:00</td>
+          <td></td>
       </tr>
     </table>
 
