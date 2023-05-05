@@ -6,7 +6,7 @@
   <hr />
 
   <div class="text-center mt-4 mb-4">
-    <a href="{{url('students/action')}}">
+    <a href="{{url('images/action')}}">
       <button class="btn btn-success">CADASTRAR</button>
     </a>
   </div>
@@ -30,12 +30,12 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Chris</td>
-          <td>Wallpaper.png</td>
-          <td>Resize</td>
+          <td></td>
+          <td></td>
+          <td></td>
           <td><a href="#">http://localhost:8000/images/processed/chris/{uuid}_wallpaper.png</a></td>
           <td><a href="#">http://localhost:8000/images/original/chris/{uuid}_wallpaper.png</a></td>
-          <td>04/05/2023 10:54:30</td>
+          <td></td>
       </tr>
     </table>
 
