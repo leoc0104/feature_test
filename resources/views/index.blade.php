@@ -15,7 +15,7 @@
     @csrf
 
     <table class="table text-center">
-      <thead class = "thead-dark">
+      <thead class="thead-dark">
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Usuário</th>
@@ -28,17 +28,20 @@
       </thead>
       
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="#">http://localhost:8000/images/processed/chris/{uuid}_wallpaper.png</a></td>
-          <td><a href="#">http://localhost:8000/images/original/chris/{uuid}_wallpaper.png</a></td>
-          <td></td>
-      </tr>
+        @foreach ($images as $image)
+          <tr>
+            <th scope="row">{{$image->id}}</th>
+            <td>{{$image->username}}</td>
+            <td>{{$image->name}}</td>
+            <td>{{$image->action}}</td>
+            <td><a href="#"></a></td>
+            <td><a href="#"></a></td>
+            <td></td>
+          </tr>
+        @endforeach
+      </tbody>
     </table>
 
-    {{}}
+    {{$images->links('pagination::bootstrap-4')}}
   </div>
 @endsection
