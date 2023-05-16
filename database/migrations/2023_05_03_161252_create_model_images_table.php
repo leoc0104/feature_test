@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('username');
             $table->string('extension');
-            $table->integer('original_size ');
+            $table->integer('original_size');
             $table->decimal('original_width', 4, 2);
             $table->decimal('original_height', 4, 2);
-            $table->enum('action', ['resize', 'crop']);
+            $table->string('action');
             $table->unsignedBigInteger('size');
             $table->unsignedInteger('width');
             $table->unsignedInteger('height');
