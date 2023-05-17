@@ -7,7 +7,7 @@ use App\Models\ModelImage;
 
 class ImageController extends Controller
 {
-    protected $objImage;
+    private $objImage;
 
     public function __construct()
     {
