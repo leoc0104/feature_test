@@ -42,6 +42,6 @@
       </tbody>
     </table>
 
-    {{$images->links('pagination::bootstrap-4')}}
+    
   </div>
 @endsection
