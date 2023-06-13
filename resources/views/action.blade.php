@@ -1,34 +1,36 @@
-<h1>Tela de cadastro</h1>
+@extends('templates.template')
 
-    <form action="">
-        <div>
-            <label for="">Usuário</label>
-            <input type="text">
-        </div>
+@section('content')
+    <h1 class="text-center mt-5 mb-5">Tela de cadastro</h1>
 
-        <div>
-            <label for="">Ação</label>
-            <select name="" id="">
-                <option value="">Selecione uma ação</option>
-                <option value="">Redimensionar</option>
-                <option value="">Recortar</option>
+    <hr />
+
+    <div class="col-8 m-auto">
+        <br />
+
+        <form action="{{route('image_list.store')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+
+            <input class="form-control" type="text" name="username" id="username" placeholder="Usuário"> <br />
+
+            <select class="form-control" name="action" id="action" >
+                <option value="1">-- Selecione uma ação --</option>
+                <option value="2">Redimensionar</option>
+                <option value="3">Recortar</option>
             </select>
-        </div>
 
-        <div>
-            <label for="">Largura</label>
-            <input type="number">
-        </div>
+            <br />
 
-        <div>
-            <label for="">Altura</label>
-            <input type="number">
-        </div>
+            <input class="form-control" type="text" name="width" id="width" placeholder="Largura"> <br />
 
-        <div>
-            <label for="">Imagem</label>
-            <input type="file" name="" id="">
-        </div>
+            <input class="form-control" type="text" name="height" id="height" placeholder="Altura"> <br />
 
-        <button>Enviar</button>
-    </form>
+            <input class="form-control-file" type="file" name="image" id="image">
+
+            <br />
+
+            <button class="btn btn-primary" type="submit" value="ENVIAR">ENVIAR</button>
+        </form>
+    </div>
+
+@endsection
