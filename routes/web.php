@@ -15,4 +15,4 @@ use App\Http\Controllers\ImageController;
 |
 */
 
-Route::resource('/image_list', ImageController::class);
+Route::resource('image_list', ImageController::class)->except(['show', 'update', 'edit', 'destroy']);
