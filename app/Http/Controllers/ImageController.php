@@ -37,10 +37,10 @@ class ImageController extends Controller
     public function store(Request $request)
     {
 
-        if ($request->file('image')->isValid()){
+        //if ($request->file('image')->isValid()){
             $nameFile = $request->name.'.'.$request->image->extension();
             $path = $request->file('image')->store('batata'.'_'.$nameFile);
-        }
+        //}
 
         $cre = $this->objImage->create([
             'username' => $request->username,
