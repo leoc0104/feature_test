@@ -14,39 +14,6 @@
     <div class="col-8 m-auto">
         @csrf
 
-<<<<<<< Updated upstream
-    <table class="table text-center">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Usuário</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Ação</th>
-          <th scope="col">Caminho</th>
-          <th scope="col">Caminho original</th>
-          <th scope="col">Data e hora de cadastro</th>
-        </tr>
-      </thead>
-      
-      <tbody>
-        @foreach ($images as $image)
-          <tr>
-            <th scope="row">{{$image->id}}</th>
-            <td>{{$image->username}}</td>
-            <td>{{$image->name}}</td>
-            <td>{{$image->action}}</td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td></td>
-          </tr>
-        @endforeach
-      </tbody>
-    </table>
-
-    
-  </div>
-@endsection
-=======
         <table class="table text-center">
             <thead class="thead-dark">
             <tr>
@@ -76,4 +43,3 @@
         </table>
     </div>
 @endsection
->>>>>>> Stashed changes
